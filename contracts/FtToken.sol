@@ -2,8 +2,6 @@
 pragma solidity ^0.5.0;
 
 contract FtToken {
-  address public owner;
-
   string public name = "FT Token";
   string public symbol = "FTT";
   string public standard = "FT Token v1.0";
@@ -19,22 +17,53 @@ contract FtToken {
           uint256 _value
       );
 
+  event Approval(
+    address indexed _owner, 
+    address indexed _spender, 
+    uint256 _value);
+
   constructor(uint256 _initialState) public {
-    owner = msg.sender;
-    balanceOf[owner] = _initialState;
+    balanceOf[msg.sender] = _initialState;
     totalSupply = _initialState;
   }
 
   function transfer (address _to, uint256 _value) public returns(bool success) {
 
-    require (balanceOf[owner] >= _value);
+    require (balanceOf[msg.sender] >= _value);
     
-    balanceOf[owner] -= _value; 
+    balanceOf[msg.sender] -= _value; 
     balanceOf[_to] += _value;
 
-    emit Transfer(owner, _to, _value);
+    emit Transfer(msg.sender, _to, _value);
     return true;
   }
+
+  function approve(address _spender, uint256 _value) public returns (bool success){
+    // Allowance
+    allowance[msg.sender][_spender] = _value;
+    // Approval Event
+    emit Approval(msg.sender,_spender,_value);
+
+    return true;
+  }
+
+  function transferFrom (address _from, address _to, uint256 _value) public returns (bool success){
+    // Require _from has enough tokens
+    require (balanceOf[_from] >= _value);
+    // Require allowance is big enough
+    require (allowance[_from][msg.sender] >= _value);
+
+    // Change the balance
+    balanceOf[_from] -= _value; 
+    balanceOf[_to] += _value;
+    // Update the allowance
+    allowance[_from][msg.sender] -= _value;
+    // Transfer event
+    emit Transfer(_from, _to, _value);
+    // // return a boolean
+    return true;
+  }
+
   
 
 }
