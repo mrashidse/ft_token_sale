@@ -1,0 +1,604 @@
+{
+  "contractName": "FtTokenSale",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b506040516020806101bb8339810180604052602081101561003057600080fd5b8101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060ea806100d16000396000f3fe608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806355a373d6146044575b600080fd5b348015604f57600080fd5b5060566098565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820f60328e65fa3f26f1fed3d36fb8602c3c4c7a896da7cc15628094e3cf9d26e7e0029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806355a373d6146044575b600080fd5b348015604f57600080fd5b5060566098565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820f60328e65fa3f26f1fed3d36fb8602c3c4c7a896da7cc15628094e3cf9d26e7e0029",
+  "sourceMap": "118:259:1:-;;;195:179;8:9:-1;5:2;;;30:1;27;20:12;5:2;195:179:1;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;195:179:1;;;;;;;;;;;;;;;;273:10;265:5;;:18;;;;;;;;;;;;;;;;;;336:14;320:13;;:30;;;;;;;;;;;;;;;;;;195:179;118:259;;;;;;",
+  "deployedSourceMap": "118:259:1:-;;;;;;;;;;;;;;;;;;;;;;;;160:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;160:28:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\n\r\nimport \"./FtToken.sol\";\r\n\r\n/**\r\n * The contractName contract does this and that...\r\n */\r\ncontract FtTokenSale {\r\n\taddress admin;\r\n\tFtToken public tokenContract; \r\n\r\n\tconstructor(FtToken _tokenContract) public {\r\n\t\t// Assign an Admin\r\n\t\tadmin = msg.sender;\r\n\t\t\r\n\t\t// Assign Token Contract\r\n\t\ttokenContract = _tokenContract; \r\n\t\t// Token Price\r\n\t}\r\n}\r\n",
+  "sourcePath": "E:/PROJECTS/blockchain/ft_token_sale/contracts/FtTokenSale.sol",
+  "ast": {
+    "absolutePath": "/E/PROJECTS/blockchain/ft_token_sale/contracts/FtTokenSale.sol",
+    "exportedSymbols": {
+      "FtTokenSale": [
+        211
+      ]
+    },
+    "id": 212,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 190,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/E/PROJECTS/blockchain/ft_token_sale/contracts/FtToken.sol",
+        "file": "./FtToken.sol",
+        "id": 191,
+        "nodeType": "ImportDirective",
+        "scope": 212,
+        "sourceUnit": 189,
+        "src": "29:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "The contractName contract does this and that...\r",
+        "fullyImplemented": true,
+        "id": 211,
+        "linearizedBaseContracts": [
+          211
+        ],
+        "name": "FtTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 193,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "143:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 192,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "143:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 195,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "160:28:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_FtToken_$188",
+              "typeString": "contract FtToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 194,
+              "name": "FtToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 188,
+              "src": "160:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FtToken_$188",
+                "typeString": "contract FtToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "238:136:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 200,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 193,
+                      "src": "265:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 201,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 283,
+                        "src": "273:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 202,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "273:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "265:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 205,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 195,
+                      "src": "320:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FtToken_$188",
+                        "typeString": "contract FtToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 206,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 197,
+                      "src": "336:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FtToken_$188",
+                        "typeString": "contract FtToken"
+                      }
+                    },
+                    "src": "320:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FtToken_$188",
+                      "typeString": "contract FtToken"
+                    }
+                  },
+                  "id": 208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "320:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 210,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 198,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 197,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "207:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_FtToken_$188",
+                    "typeString": "contract FtToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 196,
+                    "name": "FtToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 188,
+                    "src": "207:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FtToken_$188",
+                      "typeString": "contract FtToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "206:24:1"
+            },
+            "returnParameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "238:0:1"
+            },
+            "scope": 211,
+            "src": "195:179:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 212,
+        "src": "118:259:1"
+      }
+    ],
+    "src": "0:379:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/PROJECTS/blockchain/ft_token_sale/contracts/FtTokenSale.sol",
+    "exportedSymbols": {
+      "FtTokenSale": [
+        211
+      ]
+    },
+    "id": 212,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 190,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/E/PROJECTS/blockchain/ft_token_sale/contracts/FtToken.sol",
+        "file": "./FtToken.sol",
+        "id": 191,
+        "nodeType": "ImportDirective",
+        "scope": 212,
+        "sourceUnit": 189,
+        "src": "29:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "The contractName contract does this and that...\r",
+        "fullyImplemented": true,
+        "id": 211,
+        "linearizedBaseContracts": [
+          211
+        ],
+        "name": "FtTokenSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 193,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "143:13:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 192,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "143:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 195,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 211,
+            "src": "160:28:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_FtToken_$188",
+              "typeString": "contract FtToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 194,
+              "name": "FtToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 188,
+              "src": "160:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FtToken_$188",
+                "typeString": "contract FtToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 209,
+              "nodeType": "Block",
+              "src": "238:136:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 203,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 200,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 193,
+                      "src": "265:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 201,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 283,
+                        "src": "273:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 202,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "273:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "265:18:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 204,
+                  "nodeType": "ExpressionStatement",
+                  "src": "265:18:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 205,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 195,
+                      "src": "320:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FtToken_$188",
+                        "typeString": "contract FtToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 206,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 197,
+                      "src": "336:14:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FtToken_$188",
+                        "typeString": "contract FtToken"
+                      }
+                    },
+                    "src": "320:30:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FtToken_$188",
+                      "typeString": "contract FtToken"
+                    }
+                  },
+                  "id": 208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "320:30:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 210,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 198,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 197,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 210,
+                  "src": "207:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_FtToken_$188",
+                    "typeString": "contract FtToken"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 196,
+                    "name": "FtToken",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 188,
+                    "src": "207:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FtToken_$188",
+                      "typeString": "contract FtToken"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "206:24:1"
+            },
+            "returnParameters": {
+              "id": 199,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "238:0:1"
+            },
+            "scope": 211,
+            "src": "195:179:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 212,
+        "src": "118:259:1"
+      }
+    ],
+    "src": "0:379:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2020-01-25T15:38:59.935Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "The contractName contract does this and that...\r"
+  }
+}
